@@ -8,5 +8,7 @@ public class Hello {
         System.out.println("hasta la vista");
         System.out.println("jeszcze cos");
         System.out.println("Fixed message");
+        System.out.println("Fixed message");
+        System.out.println("Fixed message");
     }
 }
