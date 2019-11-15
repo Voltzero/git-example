@@ -6,5 +6,7 @@ public class MainTest {
         LabmdaIntConverter myIntAdd = (i, j) -> i + j;
         LabmdaIntConverter myIntMul = (i, j) -> i * j;
         LabmdaIntConverter myIntSub = (i, j) -> i - j;
+        System.out.println(myIntAdd.twoIntToOne(1,2));
+
     }
 }
