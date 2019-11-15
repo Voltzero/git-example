@@ -2,8 +2,8 @@ package pl.mp.git_examples.service;
 
 import pl.mp.git_examples.car.model.Car;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,7 +11,7 @@ public class CarFilter {
 
     public List<Car> findCarOfColor(List<Car> cars, String color) {
         List<Car> result = new ArrayList<>();
-        for (Car car:cars) {
+        for (Car car : cars) {
             if (car.getColor().equals(color)) {
                 result.add(car);
             }
@@ -26,4 +26,12 @@ public class CarFilter {
                 .collect(Collectors.toList());
         //return Collections.emptyList();
     }
+
+    public List<Car> getCarsWithGIvenEngineAndPriceLessThan(List<Car> cars, BigDecimal maxPrice, int minimalEngine) {
+
+        return cars.stream()
+                .filter(car -> car.getPrice().compareTo(maxPrice) < 0 && car.getEngine() <= minimalEngine)
+                .collect(Collectors.toList());
+    }
+
 }
