@@ -1,0 +1,6 @@
+.idea/
+
+gitexamples.iml
+
+#java class files
+target/
